@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/your-realita/static/css/main.13aabe8e.css",
+    "main.js": "/your-realita/static/js/main.f0b364bf.js",
+    "index.html": "/your-realita/index.html",
+    "main.13aabe8e.css.map": "/your-realita/static/css/main.13aabe8e.css.map",
+    "main.f0b364bf.js.map": "/your-realita/static/js/main.f0b364bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13aabe8e.css",
+    "static/js/main.f0b364bf.js"
+  ]
+}
