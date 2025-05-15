@@ -8,7 +8,7 @@ export default function App() {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img
-        src="/background.png"
+        src={process.env.PUBLIC_URL + "/background.png"}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         style={{ zIndex: 0, opacity: 0.8 }}
