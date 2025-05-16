@@ -41,7 +41,15 @@ export default function App() {
         </h1>
         <p className="text-xs text-gray-500 mb-2 italic">Coming soon</p>
         <p className="text-sm text-black mb-6">
-          For details visit Telegram: <span className="font-semibold">@REALITA_PROJECT</span>
+          For details visit Telegram:&nbsp;
+          <a
+            href="https://t.me/realita_project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline hover:text-[#406060] transition"
+          >
+            https://t.me/realita_project
+          </a>
         </p>
         <p className="text-xl text-gray-700 mb-8 text-center max-w-xl">
           A cutting-edge, avant-garde homepage—visually artistic, interactive, and spiritually grounded.
