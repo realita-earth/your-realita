@@ -12,8 +12,11 @@ function CountdownWidget() {
     const daysUntilTarget = daysUntilNextSunday + 7;
     const target = new Date(now);
     target.setDate(now.getDate() + daysUntilTarget);
-    target.setHours(20, 0, 0, 0); // Set to 8:00 PM (adjust as needed)
-    return target;
+    target.setHours(20, 0, 0, 0); // Set to 8:00 PM
+
+    // Halve the time between now and the target
+    const halfTime = new Date(now.getTime() + (target - now) / 2);
+    return halfTime;
   };
 
   const [timeLeft, setTimeLeft] = useState(getNextNextSunday() - new Date());
