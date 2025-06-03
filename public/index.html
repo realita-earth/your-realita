@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Realita Dashboard</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REALITA: Your Key to Paradise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e0e7ef 0%, #b8c6db 100%);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Glowing headline animation */
+    .glow {
+      color: #1E90FF;
+      text-shadow:
+        0 0 8px #1E90FF,
+        0 0 24px #FFD700,
+        0 0 48px #FFD700;
+      animation: glow 2.5s infinite alternate;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 8px #1E90FF, 0 0 24px #FFD700; }
+      100% { text-shadow: 0 0 24px #FFD700, 0 0 48px #FFD700; }
+    }
+    /* Moroccan/African pattern overlay using SVG data URI */
+    .pattern-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='58' height='58' rx='12' stroke='%231E90FF' stroke-width='2'/%3E%3Ccircle cx='30' cy='30' r='8' stroke='%23FFD700' stroke-width='2'/%3E%3C/svg%3E");
+      background-size: 60px 60px;
+    }
+    /* Tiled border for sections */
+    .pattern-border {
+      border-image: url("data:image/svg+xml,%3Csvg width='32' height='8' viewBox='0 0 32 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='6' height='6' rx='2' stroke='%231E90FF' stroke-width='2'/%3E%3Crect x='25' y='1' width='6' height='6' rx='2' stroke='%23FFD700' stroke-width='2'/%3E%3C/svg%3E") 8 repeat;
+      border-width: 4px;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero-headline { font-size: 1.2rem !important; }
+      .pattern-border { border-width: 2px; }
+    }
+  </style>
+</head>
+<body class="relative bg-gradient-to-br from-blue-50 to-yellow-50">
+  <div class="pattern-overlay"></div>
+  <!-- Header -->
+  <header class="sticky top-0 z-20 bg-[#1E90FF] bg-opacity-95 shadow-lg">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-3">
+      <div class="text-2xl font-extrabold tracking-wide text-white drop-shadow-lg">REALITA: Your Key to Paradise</div>
+      <nav class="mt-2 md:mt-0 flex gap-4 text-lg font-semibold">
+        <a href="#home" class="text-white hover:text-[#FFD700] transition">Home</a>
+        <a href="#about" class="text-white hover:text-[#FFD700] transition">About</a>
+        <a href="#technology" class="text-white hover:text-[#FFD700] transition">Technology</a>
+        <a href="#roadmap" class="text-white hover:text-[#FFD700] transition">Roadmap</a>
+        <a href="#contact" class="text-white hover:text-[#FFD700] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative flex flex-col items-center justify-center py-16 px-4 text-center">
+    <h1 class="hero-headline glow text-3xl md:text-5xl font-black mb-4">
+      We’ve pierced society’s veil—power, value, reality—<br>
+      and forged <span class="text-[#FFD700]">REALITA</span>: your key to paradise on Earth
+    </h1>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="relative max-w-3xl mx-auto my-8 bg-white/80 rounded-2xl shadow-xl pattern-border px-6 py-8">
+    <h2 class="text-2xl font-bold text-[#1E90FF] mb-3">About</h2>
+    <p class="text-lg text-gray-800 leading-relaxed">
+      REALITA unites nations with a blockchain-backed ecosystem, securing gold, land, and water for sovereignty and peace.
+    </p>
+  </section>
+
+  <!-- Technology -->
+  <section id="technology" class="relative max-w-3xl mx-auto my-8 bg-white/80 rounded-2xl shadow-xl pattern-border px-6 py-8">
+    <h2 class="text-2xl font-bold text-[#1E90FF] mb-3">Technology</h2>
+    <p class="text-lg text-gray-800 leading-relaxed">
+      Powered by <span class="font-bold text-[#1E90FF]">Solana</span> and <span class="font-bold text-[#FFD700]">Polygon</span> for speed and scalability.<br>
+      <span class="font-bold text-[#FFD700]">Lumen AI</span> is the guardian ensuring trust and security.
+    </p>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="relative max-w-3xl mx-auto my-8 bg-white/80 rounded-2xl shadow-xl pattern-border px-6 py-8">
+    <h2 class="text-2xl font-bold text-[#1E90FF] mb-3">Roadmap</h2>
+    <ul class="space-y-4 text-lg text-gray-800">
+      <li class="bg-blue-50 rounded-lg px-4 py-3 border-l-4 border-[#FFD700] shadow-sm">
+        <span class="font-semibold text-[#FFD700]">Summer 2025:</span> Launch on Solana/Polygon
+      </li>
+      <li class="bg-blue-50 rounded-lg px-4 py-3 border-l-4 border-[#FFD700] shadow-sm">
+        Coalition Expansion
+      </li>
+      <li class="bg-blue-50 rounded-lg px-4 py-3 border-l-4 border-[#FFD700] shadow-sm">
+        Minting Begins
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="relative max-w-3xl mx-auto my-8 bg-white/80 rounded-2xl shadow-xl pattern-border px-6 py-8">
+    <h2 class="text-2xl font-bold text-[#1E90FF] mb-3">Contact</h2>
+    <form id="contactForm" class="flex flex-col gap-4 items-center" autocomplete="off">
+      <input type="text" name="name" placeholder="Name" required class="w-full max-w-md px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-[#1E90FF] outline-none"/>
+      <input type="email" name="email" placeholder="Email" required class="w-full max-w-md px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-[#1E90FF] outline-none"/>
+      <textarea name="message" rows="4" placeholder="Message" required class="w-full max-w-md px-4 py-2 rounded-lg border border-blue-200 focus:ring-2 focus:ring-[#1E90FF] outline-none"></textarea>
+      <button type="submit" class="bg-[#FFD700] text-[#1E90FF] font-bold px-8 py-2 rounded-lg shadow hover:bg-[#ffe066] transition">Send</button>
+      <div class="text-gray-600 text-sm mt-2">
+        Or email us at <a href="mailto:contact@realita.wpc" class="text-[#1E90FF] underline">contact@realita.wpc</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1E90FF] text-white text-center py-6 mt-8">
+    <div>© 2025 REALITA</div>
+    <div class="flex justify-center gap-6 mt-2">
+      <a href="#" class="hover:text-[#FFD700] transition" title="X.com" aria-label="X.com">
+        <svg width="24" height="24" fill="currentColor"><text x="0" y="20" font-size="20">&#120143;</text></svg>
+      </a>
+      <a href="#" class="hover:text-[#FFD700] transition" title="Discord" aria-label="Discord">
+        <svg width="24" height="24" fill="currentColor"><text x="0" y="20" font-size="20">&#128172;</text></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Contact form validation and alert
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      alert("Message sent! We’ll contact you soon.");
+      this.reset();
+    });
+  </script>
+</body>
 </html>
