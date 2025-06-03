@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/your-realita/static/css/main.d5ab8590.css",
+    "main.css": "/your-realita/static/css/main.3dfc2966.css",
     "main.js": "/your-realita/static/js/main.ca247377.js",
     "index.html": "/your-realita/index.html",
-    "main.d5ab8590.css.map": "/your-realita/static/css/main.d5ab8590.css.map",
+    "main.3dfc2966.css.map": "/your-realita/static/css/main.3dfc2966.css.map",
     "main.ca247377.js.map": "/your-realita/static/js/main.ca247377.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5ab8590.css",
+    "static/css/main.3dfc2966.css",
     "static/js/main.ca247377.js"
   ]
 }
